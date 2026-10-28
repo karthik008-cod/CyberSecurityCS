@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Stalking Case Study - Simple &amp; Concise</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <span class="badge">Cyber Security Essentials &bull; Case Study 5</span>
+      <h1>Cyber Stalking Through Social Media</h1>
+      <div class="scenario-box">
+        <strong>Scenario:</strong> A student receives repeated threatening messages from an unknown attacker across social media. The attacker collects public information (OSINT) to track locations and intimidate the victim.
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation: 1-to-1 with Tasks 1 to 7 -->
+  <nav class="tab-nav">
+    <div class="container nav-row">
+      <button class="tab-btn active" data-tab="task1">Task 1: Offense</button>
+      <button class="tab-btn" data-tab="task2">Task 2: OSINT Exploitation</button>
+      <button class="tab-btn" data-tab="task3">Task 3: Victim Risks</button>
+      <button class="tab-btn" data-tab="task4">Task 4: Evidence Locker</button>
+      <button class="tab-btn" data-tab="task5">Task 5: Countermeasures</button>
+      <button class="tab-btn" data-tab="task6">Task 6: Reporting &amp; Legal</button>
+      <button class="tab-btn" data-tab="task7">Task 7: Awareness Strategy</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- TASK 1 -->
+    <section id="task1" class="tab-panel active">
+      <h2>Task 1: Identify the Cyber Offense</h2>
+      <p class="subtitle">Check the attacker's observed actions to see the classified cyber offenses and applicable laws.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Attacker Actions Observed</h3>
+          
+          <label class="check-row">
+            <input type="checkbox" class="t1-symptom" value="stalking" checked>
+            <span>Repeated unwanted messages across multiple platforms</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t1-symptom" value="threats" checked>
+            <span>Direct threats and intimidating messages</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t1-symptom" value="osint" checked>
+            <span>Tracking routines using public photos &amp; posts (OSINT)</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t1-symptom" value="burners" checked>
+            <span>Making fake/burner accounts after being blocked</span>
+          </label>
+        </div>
+
+        <div class="card">
+          <h3>Classified Offenses &amp; Law</h3>
+          <div id="t1-results"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TASK 2 -->
+    <section id="task2" class="tab-panel">
+      <h2>Task 2: How Public Information Was Exploited (OSINT)</h2>
+      <p class="subtitle">Select public posts to see how an attacker connects breadcrumbs into an actionable surveillance dossier.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Victim's Public Posts</h3>
+          
+          <label class="check-row">
+            <input type="checkbox" class="t2-post" value="bio" checked>
+            <span><strong>Public Bio:</strong> College name &amp; engineering branch</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t2-post" value="timetable" checked>
+            <span><strong>Story Post:</strong> Class schedule ("Monday 9 AM Lab in Room 304")</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t2-post" value="geotag" checked>
+            <span><strong>Live Check-in:</strong> Real-time photo at Blue Bean Café</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t2-post" value="idcard">
+            <span><strong>Photo with ID Card:</strong> Student roll number and sports timings</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t2-post" value="friends" checked>
+            <span><strong>Tagged Friends:</strong> Visible close friends and peer circle</span>
+          </label>
+
+          <div style="margin-top:12px;">
+            <label>Exposure Meter: <span id="t2-exposure-text" class="pill pill-warning">60% Moderate</span></label>
+            <div class="meter-bg">
+              <div id="t2-exposure-fill" class="meter-fill" style="width:60%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Attacker Reconnaissance Intel (Derived Data)</h3>
+          <pre id="t2-dossier" class="code-output"></pre>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TASK 3 -->
+    <section id="task3" class="tab-panel">
+      <h2>Task 3: Identify the Risks Faced by the Victim</h2>
+      <p class="subtitle">Evaluate the 4 key threat dimensions to determine the overall danger level.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Risk Factor Assessment</h3>
+
+          <div class="form-group">
+            <label>1. Physical Safety Risk</label>
+            <select id="t3-r-phys" class="t3-input">
+              <option value="90" selected>High: Attacker knows real-time classroom &amp; routine</option>
+              <option value="50">Medium: Attacker knows campus location only</option>
+              <option value="20">Low: Attacker is distant / generic threats</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>2. Psychological &amp; Mental Health Risk</label>
+            <select id="t3-r-psy" class="t3-input">
+              <option value="90" selected>High: Severe anxiety, panic attacks, insomnia</option>
+              <option value="50">Medium: Constant worry and distraction</option>
+              <option value="20">Low: Mild annoyance</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>3. Digital Privacy Risk</label>
+            <select id="t3-r-digi" class="t3-input">
+              <option value="80" selected>High: Attacker creates burner accounts to evade blocks</option>
+              <option value="40">Low: Single account contact</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>4. Academic Disruption</label>
+            <select id="t3-r-acad" class="t3-input">
+              <option value="80" selected>High: Skipping classes and exams out of fear</option>
+              <option value="30">Low: Attendance normal</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <h3>Composite Threat Level</h3>
+              <span id="t3-score-pill" class="pill pill-danger" style="font-size:13px; padding:3px 8px;">86 / 100</span>
+            </div>
+            <p id="t3-verdict-title" style="font-weight:700; color:var(--danger); margin:8px 0 4px;">Critical Danger (Immediate Action Required)</p>
+            <p id="t3-verdict-body" style="font-size:13px; color:var(--text-muted);">
+              The attacker has actionable physical schedule data and is causing severe mental distress. Immediate campus escort and police reporting required.
+            </p>
+          </div>
+
+          <div class="callout callout-danger" style="margin-top:10px;">
+            <strong>Key Impacts:</strong>
+            <ul style="padding-left:16px; margin-top:4px; font-size:12.5px;">
+              <li><strong>Physical:</strong> Ambush risk on predictable transit routes.</li>
+              <li><strong>Psychological:</strong> Constant fear, hypervigilance, loss of sleep.</li>
+              <li><strong>Academic:</strong> Missed lab sessions and falling grades.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TASK 4 -->
+    <section id="task4" class="tab-panel">
+      <h2>Task 4: Recommend Evidence-Preservation Measures</h2>
+      <p class="subtitle">Preserve digital evidence without altering metadata to ensure it is admissible in court.</p>
+
+      <!-- 4 Golden Rules -->
+      <div class="grid-2" style="margin-bottom:12px;">
+        <div class="card" style="border-left:3px solid var(--primary); padding:12px;">
+          <strong>1. Do NOT Reply:</strong> Never argue or provoke.
+        </div>
+        <div class="card" style="border-left:3px solid var(--primary); padding:12px;">
+          <strong>2. Full Screenshots:</strong> Keep system clock &amp; battery visible.
+        </div>
+        <div class="card" style="border-left:3px solid var(--primary); padding:12px;">
+          <strong>3. Copy Profile Link:</strong> Handles change, URLs don't.
+        </div>
+        <div class="card" style="border-left:3px solid var(--primary); padding:12px;">
+          <strong>4. Do NOT Delete Chats:</strong> Keep raw original records.
+        </div>
+      </div>
+
+      <!-- Evidence Table -->
+      <div class="card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <h3>Incident Evidence Log</h3>
+          <button id="t4-export-btn" class="btn btn-outline btn-sm">📄 Export Formal Dossier</button>
+        </div>
+
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Time</th>
+                <th>Platform</th>
+                <th>Stalker Handle</th>
+                <th>Threat Message</th>
+                <th>Screenshot</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="t4-table-body">
+              <!-- JS Populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Add / Edit Evidence Inline Form -->
+        <div id="t4-form-container" style="margin-top:14px; background:#f8fafc; padding:12px; border-radius:6px; border:1px solid var(--border);">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <strong id="t4-form-title" style="font-size:13px;">Add New Incident Record:</strong>
+            <span id="t4-mode-badge" class="pill pill-warning" style="display:none;">Editing Mode</span>
+          </div>
+          <input type="hidden" id="t4-edit-id" value="">
+          <div class="grid-3" style="margin-top:8px;">
+            <input type="text" id="t4-in-platform" placeholder="Platform (e.g. Instagram, X, WhatsApp)">
+            <input type="text" id="t4-in-handle" placeholder="Stalker handle / URL">
+            <input type="text" id="t4-in-text" placeholder="Message content">
+          </div>
+          <div style="margin-top:8px;">
+            <label for="t4-in-file">Upload Stalker Screenshot (PNG/JPG):</label>
+            <div class="file-input-wrapper">
+              <input type="file" id="t4-in-file" accept="image/*">
+              <div id="t4-file-preview" style="margin-top:4px; font-size:12px; color:var(--text-muted);"></div>
+            </div>
+          </div>
+          <div style="margin-top:10px; display:flex; gap:8px;">
+            <button id="t4-add-btn" class="btn btn-primary btn-sm">+ Save to Evidence Log</button>
+            <button id="t4-cancel-btn" class="btn btn-outline btn-sm" style="display:none;">Cancel Edit</button>
+          </div>
+        </div>
+
+        <div id="t4-dossier-wrap" style="display:none; margin-top:12px;">
+          <label>Chain of Custody Dossier Preview:</label>
+          <pre id="t4-dossier-text" class="code-output"></pre>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TASK 5 -->
+    <section id="task5" class="tab-panel">
+      <h2>Task 5: Technical and Behavioral Countermeasures</h2>
+      <p class="subtitle">Apply both technical account lockdown and behavioral routine changes.</p>
+
+      <div class="card" style="margin-bottom:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <strong style="font-size:13.5px;">Hardening Progress:</strong>
+          <span id="t5-prog-text" class="pill pill-info">50% Completed</span>
+        </div>
+        <div class="meter-bg">
+          <div id="t5-prog-fill" class="meter-fill" style="width:50%;"></div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Pillar A: Technical Fixes</h3>
+          
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb" checked>
+            <span><strong>Switch to Private:</strong> Lock Instagram, X, and Facebook to approved followers only.</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb" checked>
+            <span><strong>Enable App 2FA:</strong> Use Google Authenticator (avoid SMS OTP).</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb">
+            <span><strong>Disable GPS on Camera:</strong> Turn off location tags in phone camera settings.</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb">
+            <span><strong>Filter DMs &amp; Comments:</strong> Set message requests to 'Followers only'.</span>
+          </label>
+        </div>
+
+        <div class="card">
+          <h3>Pillar B: Behavioral Fixes</h3>
+          
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb" checked>
+            <span><strong>Zero Engagement:</strong> Never reply, threaten back, or negotiate.</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb" checked>
+            <span><strong>Lag Posting:</strong> Post photos only *after* leaving the venue.</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb">
+            <span><strong>Vary Commute:</strong> Alter transit routes and walk in groups/pairs.</span>
+          </label>
+
+          <label class="check-row">
+            <input type="checkbox" class="t5-cb">
+            <span><strong>Brief Family &amp; College:</strong> Inform parents and proctor discretely.</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TASK 6 -->
+    <section id="task6" class="tab-panel">
+      <h2>Task 6: Reporting and Legal Considerations</h2>
+      <p class="subtitle">Follow a 3-tier escalation path and generate an official formal complaint.</p>
+
+      <div class="grid-3" style="margin-bottom:14px;">
+        <div class="card">
+          <span class="pill pill-info">Tier 1</span>
+          <h3 style="margin-top:6px;">Social Media</h3>
+          <p style="font-size:12.5px; color:var(--text-muted);">
+            Report profile for harassment. Request IP log preservation. Block only <em>after</em> saving evidence.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="pill pill-warning">Tier 2</span>
+          <h3 style="margin-top:6px;">College ICC</h3>
+          <p style="font-size:12.5px; color:var(--text-muted);">
+            Report to Internal Complaints Committee (ICC) &amp; Proctor for campus security escort and attendance safety.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="pill pill-danger">Tier 3</span>
+          <h3 style="margin-top:6px;">Police / Cyber Cell</h3>
+          <p style="font-size:12.5px; color:var(--text-muted);">
+            File FIR under <strong>IPC 354D</strong> (Stalking) &amp; <strong>IPC 506</strong> (Intimidation). Call <strong>1930</strong> or visit <strong>cybercrime.gov.in</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Complaint Generator -->
+      <div class="card">
+        <h3>1-Click Formal Complaint Generator</h3>
+        <div class="grid-2" style="margin-bottom:10px;">
+          <input type="text" id="t6-name" value="Jane Doe (Student)" placeholder="Student Name">
+          <input type="text" id="t6-inst" value="Department of Computer Science" placeholder="College / Department">
+        </div>
+        <button id="t6-gen-btn" class="btn btn-primary btn-sm">⚡ Generate Formal Police / ICC Complaint</button>
+
+        <div id="t6-wrap" style="display:none; margin-top:12px;">
+          <pre id="t6-letter" class="code-output" style="max-height:220px;"></pre>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TASK 7 -->
+    <section id="task7" class="tab-panel">
+      <h2>Task 7: Student Awareness Strategy</h2>
+      <p class="subtitle">Campus awareness blueprint and a quick 3-question student self-audit.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Campus Awareness Plan (3 Steps)</h3>
+          
+          <div style="margin-bottom:10px;">
+            <strong>1. Freshman Induction Module:</strong>
+            <p style="font-size:13px; color:var(--text-muted); margin:0;">30-minute mandatory orientation on OSINT risks, privacy settings, and EXIF metadata.</p>
+          </div>
+
+          <div style="margin-bottom:10px;">
+            <strong>2. Peer Cyber Ambassadors:</strong>
+            <p style="font-size:13px; color:var(--text-muted); margin:0;">Student-led audit clinics in dorms to help peers turn profiles private and set up 2FA.</p>
+          </div>
+
+          <div>
+            <strong>3. Confidential 24/7 Helpline:</strong>
+            <p style="font-size:13px; color:var(--text-muted); margin:0;">Campus emergency hotline linked with campus security and counseling support.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <h3 style="margin:0;">Quick Student Hygiene Quiz (3 Questions)</h3>
+            <button id="t7-refresh-btn" class="btn btn-outline btn-sm" title="Generate 3 different questions">
+              🔄 New Questions
+            </button>
+          </div>
+          <p class="subtitle" style="margin-bottom:10px;">Randomized from the student cyber defense question bank.</p>
+
+          <div id="t7-quiz-container">
+            <!-- Dynamically populated 3 random questions by JS -->
+          </div>
+
+          <div style="margin-top:10px; display:flex; gap:8px;">
+            <button id="t7-quiz-btn" class="btn btn-primary btn-sm">Check My Score</button>
+            <button id="t7-retry-btn" class="btn btn-outline btn-sm" style="display:none;">Try Another 3 Questions</button>
+          </div>
+          <div id="t7-result"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshot Lightbox Modal -->
+    <div id="screenshot-modal" class="modal-overlay" style="display:none;">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h4 id="modal-title" style="font-size:14px; margin:0;">Evidence Screenshot Preview</h4>
+          <button id="modal-close-btn" class="modal-close" title="Close">&times;</button>
+        </div>
+        <div style="text-align:center; background:#0f172a; padding:10px; border-radius:6px;">
+          <img id="modal-img" src="" alt="Evidence Screenshot" style="max-width:100%; max-height:55vh; object-fit:contain; border-radius:4px;">
+        </div>
+        <div id="modal-meta" style="margin-top:10px; font-size:12px; color:var(--text-muted); line-height:1.5;"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      Cyber Security Essentials &bull; Case Study 5 &bull; Simple &amp; Concise Edition
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
